@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Full DHL Shipping Plugin",
+  "FriendlyName": "DHL",
+  "SystemName": "Shipping.DHL",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "Anton Rashchenko",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Shipping.DHL.dll",
+  "Description": "This plugin offers shipping service by DHL"
+}
