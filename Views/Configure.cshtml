@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Nop.Plugin.Shipping.DHL.Models.DHLShippingModel
+
+@{
     Layout = "_ConfigurePlugin";
 }
 
@@ -6,12 +8,40 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="form-group">
-                <div class="col-md-3">
+                <div class="col-md-3" style="padding:10px;">
                     <nop-label asp-for="UseSandbox" />
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9" style="padding: 10px;">
                     <nop-editor asp-for="UseSandbox" />
                     <span asp-validation-for="UseSandbox"></span>
+                </div>
+                <div class="col-md-3" style="padding: 10px;">
+                    <nop-label asp-for="UserId" />
+                </div>
+                <div class="col-md-9" style="padding:10px;">
+                    <nop-editor asp-for="UserId" />
+                    <span asp-validation-for="UserId"></span>
+                </div>
+                <div class="col-md-3" style="padding:10px;">
+                    <nop-label asp-for="Key" />
+                </div>
+                <div class="col-md-9" style="padding:10px;">
+                    <nop-editor asp-for="Key" />
+                    <span asp-validation-for="Key"></span>
+                </div>
+                <div class="col-md-3" style="padding:10px;">
+                    <nop-label asp-for="Secret" />
+                </div>
+                <div class="col-md-9" style="padding:10px;">
+                    <nop-editor asp-for="Secret" />
+                    <span asp-validation-for="Secret"></span>
+                </div>
+                <div class="col-md-3" style="padding:10px;">
+                    <nop-label asp-for="AccountNumbers" />
+                </div>
+                <div class="col-md-9" style="padding:10px;">
+                    <nop-editor asp-for="AccountNumbers" />
+                    <span asp-validation-for="AccountNumbers"></span>
                 </div>
             </div>
         </div>

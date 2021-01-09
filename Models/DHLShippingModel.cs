@@ -7,7 +7,15 @@ namespace Nop.Plugin.Shipping.DHL.Models
 {
     public class DHLShippingModel
     {
-        [NopResourceDisplayName("Plugins.Shipping.DHL.Fields.UseSandbox")]
+        [NopResourceDisplayName("UseSandbox")]
         public bool UseSandbox { get; set; }
+        [NopResourceDisplayName("UserId")]
+        public string UserId { get; set; }
+        [NopResourceDisplayName("Key")]
+        public string Key { get; set; }
+        [NopResourceDisplayName("Secret")]
+        public string Secret { get; set; }
+        [NopResourceDisplayName("AccountNumbers")]
+        public string AccountNumbers { get; set; }
     }
 }

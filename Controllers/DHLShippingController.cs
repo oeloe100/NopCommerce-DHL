@@ -45,7 +45,11 @@ namespace Nop.Plugin.Shipping.DHL.Controllers
             //prepare common model
             var model = new DHLShippingModel
             {
-                UseSandbox = true,
+                UseSandbox = _settings.UseSandbox,
+                UserId = _settings.UserID,
+                Secret = _settings.Secret,
+                Key = _settings.Key,
+                AccountNumbers = _settings.AccountNumbers
             };
 
             return View("~/Plugins/Shipping.DHL/Views/Configure.cshtml", model);
@@ -61,6 +65,11 @@ namespace Nop.Plugin.Shipping.DHL.Controllers
             if (!ModelState.IsValid)
                 return Configure();
 
+            _settings.UseSandbox = model.UseSandbox;
+            _settings.AccountNumbers = model.AccountNumbers;
+            _settings.Key = model.Key;
+            _settings.Secret = model.Secret;
+            _settings.UserID = model.UserId;
             _settings.UseSandbox = model.UseSandbox;
 
             return Configure();

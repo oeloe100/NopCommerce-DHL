@@ -36,6 +36,10 @@ namespace Nop.Plugin.Shipping.DHL
             _settingService.SaveSetting(new DHLSettings
             {
                 UseSandbox = true,
+                UserID = "23KL3LK-2LK4K24-KL2K32..",
+                Key = "...",
+                Secret = "...",
+                AccountNumbers = "213,3232,122.."
             });
 
             base.Install();
