@@ -41,9 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
     <Folder Include="Domain\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

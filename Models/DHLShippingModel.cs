@@ -1,11 +1,12 @@
-﻿using Nop.Web.Framework.Mvc.ModelBinding;
+﻿using Nop.Web.Framework.Models;
+using Nop.Web.Framework.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Nop.Plugin.Shipping.DHL.Models
 {
-    public class DHLShippingModel
+    public class DHLShippingModel : BaseNopModel
     {
         [NopResourceDisplayName("UseSandbox")]
         public bool UseSandbox { get; set; }
@@ -13,9 +14,11 @@ namespace Nop.Plugin.Shipping.DHL.Models
         public string UserId { get; set; }
         [NopResourceDisplayName("Key")]
         public string Key { get; set; }
-        [NopResourceDisplayName("Secret")]
-        public string Secret { get; set; }
-        [NopResourceDisplayName("AccountNumbers")]
-        public string AccountNumbers { get; set; }
+        [NopResourceDisplayName("CustomerId")]
+        public string AccountNumber { get; set; }
+        [NopResourceDisplayName("LocationFinderKey")]
+        public string LocationFinderKey { get; set; }
+        [NopResourceDisplayName("ApiUrl")]
+        public string ApiUrl { get; set; }
     }
 }

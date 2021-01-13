@@ -23,13 +23,18 @@ namespace Nop.Plugin.Shipping.DHL
         public string Key { get; set; }
 
         /// <summary>
-        /// Private DHL API secret
+        /// DHL User AcccountNumber
         /// </summary>
-        public string Secret { get; set; }
+        public string AccountNumber { get; set; }
 
         /// <summary>
-        /// DHL User Acccount Number(s) , seperated
+        /// DHL Developer API Key. For DHL location services.
         /// </summary>
-        public string AccountNumbers { get; set; }
+        public string LocationFinderKey { get; set; }
+
+        /// <summary>
+        /// dhl api url. default = api-gw.dhlparcel.nl/
+        /// </summary>
+        public string ApiUrl { get; set; }
     }
 }
