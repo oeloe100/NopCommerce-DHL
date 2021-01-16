@@ -1,0 +1,35 @@
+﻿@model List<DeliveryTableModel>
+
+@using Nop.Plugin.Shipping.DHL.Models
+
+<div>
+    @{
+        foreach (var item in Model)
+        {
+            <a class="select">
+                <form name="deliveryData" class="deliveryData" style="padding:10px; margin:10px; display:inline-block; border:1px solid lightgray;">
+                    <input value="@item.DeliveryDate" name="DeliveryDate" readonly/>
+                    <input value="@item.StartTime" name="StartTime" readonly />
+                    <input value="@item.EndTime" name="EndTime" readonly />
+                </form>
+            </a>
+        }
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".select").on("click", function () {
+            var fData = $(".deliveryData").serialize();
+
+            console.log(fData);
+
+            $.ajax({
+                type: 'POST',
+                url: '/DeliveryData/SaveData',
+                data: fData,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+            });
+        });
+    });
+</script>
