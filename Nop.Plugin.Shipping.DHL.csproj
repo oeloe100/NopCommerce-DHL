@@ -49,6 +49,13 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Folder Include="Domain\" />
+  </ItemGroup>
+
+  <ItemGroup>
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
     <ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
   </ItemGroup>
   

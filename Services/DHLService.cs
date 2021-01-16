@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+<<<<<<< HEAD
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using Nop.Core;
@@ -8,6 +9,10 @@ using Nop.Plugin.Shipping.DHL.Models;
 using Nop.Services.Directory;
 using Nop.Services.Localization;
 using Nop.Services.Orders;
+=======
+using Nop.Core;
+using Nop.Core.Domain.Shipping;
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
 using Nop.Services.Shipping;
 using System;
 using System.Collections.Generic;
@@ -18,6 +23,25 @@ namespace Nop.Plugin.Shipping.DHL.Services
 {
     public class DHLService
     {
+<<<<<<< HEAD
+=======
+        #region Fields
+
+        private readonly DHLStandardHttpClient _dhlHttpClient;
+
+        #endregion
+
+        #region Ctor
+
+        public DHLService(
+            DHLStandardHttpClient dhlHttpClient)
+        {
+            _dhlHttpClient = dhlHttpClient;
+        }
+
+        #endregion
+
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
         #region Methods
 
         public GetShippingOptionResponse GetShippingOptionResponse(GetShippingOptionRequest getShippingOptionRequest)
@@ -26,6 +50,7 @@ namespace Nop.Plugin.Shipping.DHL.Services
             {
                 new ShippingOption()
                 {
+<<<<<<< HEAD
                     ShippingRateComputationMethodSystemName = "DHL_Delivery",
                     IsPickupInStore = false,
                     Description = "Uw pakket wordt aan de deur afgeleverd.",
@@ -41,6 +66,14 @@ namespace Nop.Plugin.Shipping.DHL.Services
                     Name = "DHL Afhaalpunt",
                     TransitDays = 1,
                     Rate = 6
+=======
+                    ShippingRateComputationMethodSystemName = "DHL",
+                    IsPickupInStore = false,
+                    Description = "Uw pakket wordt aan de deur afgeleverd.",
+                    Name = "Pakketdienst",
+                    TransitDays = 1,
+                    Rate = Convert.ToDecimal("6,25")
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
                 }
             };
 
@@ -53,6 +86,7 @@ namespace Nop.Plugin.Shipping.DHL.Services
             return shippingOptionsResponse;
         }
 
+<<<<<<< HEAD
         public JObject BuildShipmentBody()
         {
             ShipmentBodyModel shipmentBodyModel = new ShipmentBodyModel()
@@ -65,6 +99,8 @@ namespace Nop.Plugin.Shipping.DHL.Services
             return jObject;
         } 
 
+=======
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
         #endregion
     }
 }

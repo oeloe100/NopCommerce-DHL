@@ -3,6 +3,7 @@ using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Nop.Core;
+<<<<<<< HEAD
 using Nop.Core.Domain.Common;
 using Nop.Core.Domain.Customers;
 using Nop.Core.Infrastructure;
@@ -14,6 +15,11 @@ using Nop.Services.Shipping;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+=======
+using Nop.Plugin.Shipping.DHL.Models;
+using System;
+using System.Collections.Generic;
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +31,10 @@ namespace Nop.Plugin.Shipping.DHL.Services
         #region Fields
 
         private readonly IHttpContextAccessor _httpContextAccessor;
+<<<<<<< HEAD
         private readonly IWorkContext _workContext;
+=======
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
         private readonly HttpClient _httpClient;
         private readonly DHLSettings _dhlSettings;
 
@@ -35,12 +44,18 @@ namespace Nop.Plugin.Shipping.DHL.Services
 
         public DHLStandardHttpClient(
             IHttpContextAccessor httpContextAccessor,
+<<<<<<< HEAD
             IWorkContext workContext,
+=======
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
             HttpClient httpClient,
             DHLSettings dhlSettings)
         {
             _httpContextAccessor = httpContextAccessor;
+<<<<<<< HEAD
             _workContext = workContext;
+=======
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
             _httpClient = httpClient;
             _dhlSettings = dhlSettings;
 
@@ -48,8 +63,11 @@ namespace Nop.Plugin.Shipping.DHL.Services
             httpClient.Timeout = TimeSpan.FromSeconds(20);
             httpClient.DefaultRequestHeaders.Add(HeaderNames.UserAgent, $"nopCommerce-{NopVersion.CurrentVersion}");
 
+<<<<<<< HEAD
             //DHLAuthenticateAsync().GetAwaiter().GetResult();
 
+=======
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
             if (string.IsNullOrEmpty(httpContextAccessor.HttpContext.Request.Cookies["accessToken"]) &&
                 string.IsNullOrEmpty(httpContextAccessor.HttpContext.Request.Cookies["refreshToken"]))
             {
@@ -117,6 +135,7 @@ namespace Nop.Plugin.Shipping.DHL.Services
         }
 
         #endregion
+<<<<<<< HEAD
 
         #region Utilities
 
@@ -229,5 +248,7 @@ namespace Nop.Plugin.Shipping.DHL.Services
         }
 
         #endregion
+=======
+>>>>>>> 67aab8c77e0c8f99bb3f15d7ceb45bc156150e5f
     }
 }
